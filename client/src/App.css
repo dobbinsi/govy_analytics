@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+body {
+    background-color: #c8ece0;
+    color: black;
+}
+
+.wrapper {
+    width: 85%;
+    margin: auto;
+    padding: 30px;
+    background-color: transparent
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.marinade-logo {
+    width: 250px;
+    height: 40px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flipside-logo {
+    width: 250px;
+    height: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.single {
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #000000;
+    margin-bottom: 20px;
+}
+
+.single-topper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.chart-area {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.double {
+    margin: auto;
+    display: flex;
+    justify-content:space-between;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+
+.small-chart-area {
+    min-height: 150px;
+    width: 40%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #000000;
+}
