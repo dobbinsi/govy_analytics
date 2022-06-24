@@ -10,7 +10,6 @@ const SinglePopular = () => {
         "https://node-api.flipsidecrypto.com/api/v2/queries/ce3506f4-267d-45a8-9df4-96f926bbf159/data/latest"
       )
       .then((res) => {
-        console.log(res.data);
         setPopTableData(res.data);
       })
       .catch((err) => console.log(err));
@@ -18,7 +17,27 @@ const SinglePopular = () => {
 
   return (
     <div className="single">
-      <h1>this will be a table jawn</h1>
+      <h3 className="table-title">Most Popular Validators</h3>
+      <table className="table-main">
+        <thead>
+          <tr>
+            <th>Validator Name</th>
+            <th>Unique Voters</th>
+            <th>Total Votes (MNDE)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {popTableData.map((validator, index) => (
+            <tr>
+              <td>{validator.VALIDATOR_NAMES}</td>
+              <td className="validator-voters">{validator.VOTERS}</td>
+              <td className="validator-shares">
+                {validator.TOTAL_DELEGATED_SHARES.toLocaleString()}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

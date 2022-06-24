@@ -34,7 +34,7 @@ const Double = () => {
           "#308d89",
         ],
         borderColor: ["#4b423f"],
-        borderWidth: 2,
+        borderWidth: 1.5,
       },
     ],
   };
@@ -70,22 +70,27 @@ const Double = () => {
       {
         label: "# of Wallets",
         data: partChartWallets,
-        backgroundColor: ["#308d89", "#e76d48"],
+        backgroundColor: ["#e76d48", "#308d89"],
         borderColor: ["#4b423f"],
-        borderWidth: 2,
+        borderWidth: 1.5,
       },
     ],
   };
 
   const partChartOptions = {
     responsive: true,
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
     plugins: {
       legend: {
         position: "bottom",
         align: "start",
         labels: {
           font: {
-            size: 12,
+            size: 14,
             family: "'Maven Pro', sans-serif",
           },
         },

@@ -7,6 +7,7 @@ import SingleNFT from "./components/SingleNFT";
 import SingleTopAddys from "./components/SingleTopAddys";
 import SingleProps from "./components/SingleProps";
 import SinglePopular from "./components/SinglePopular";
+import SinlgeWhales from "./components/SingleWhales";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <SingleTopAddys />
       <SingleProps />
       <SinglePopular />
+      <SinlgeWhales />
       <Footer />
     </div>
   );

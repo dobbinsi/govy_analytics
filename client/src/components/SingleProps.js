@@ -95,11 +95,15 @@ const SingleProps = () => {
         label: "Voters",
         data: actualVoters,
         backgroundColor: "#e76d48",
+        borderColor: ["#4b423f"],
+        borderWidth: 1.5,
       },
       {
         label: "Eligible Wallets",
         data: eligibleVoters,
         backgroundColor: "#308d89",
+        borderColor: ["#4b423f"],
+        borderWidth: 1.5,
       },
     ],
   };

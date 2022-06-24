@@ -79,6 +79,8 @@ const SingleNFT = () => {
       {
         data: normAmounts,
         backgroundColor: "#308d89",
+        borderColor: ["#4b423f"],
+        borderWidth: 0.75,
       },
     ],
   };
