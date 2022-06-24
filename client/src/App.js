@@ -3,15 +3,21 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import SingleMain from "./components/SingleMain";
 import Double from "./components/Double";
-import Single from "./components/Single";
+import SingleNFT from "./components/SingleNFT";
+import SingleTopAddys from "./components/SingleTopAddys";
+import SingleProps from "./components/SingleProps";
+import SinglePopular from "./components/SinglePopular";
 
 const App = () => {
   return (
     <div className="wrapper">
       <Header />
       <SingleMain />
+      <SingleNFT />
       <Double />
-      <Single />
+      <SingleTopAddys />
+      <SingleProps />
+      <SinglePopular />
       <Footer />
     </div>
   );
