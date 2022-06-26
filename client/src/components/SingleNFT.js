@@ -13,6 +13,7 @@ import {
 import { Bar } from "react-chartjs-2";
 
 const SingleNFT = () => {
+  const [nftOwners, setNftOwners] = useState([]);
   const [nftData, setNftData] = useState([]);
   const nftChartDates = nftData.map((item) => {
     return item["DAYS"];
@@ -88,6 +89,17 @@ const SingleNFT = () => {
   useEffect(() => {
     axios
       .get(
+        "https://node-api.flipsidecrypto.com/api/v2/queries/b3ee2990-4fcf-4c9d-850a-c1038c7ea29c/data/latest"
+      )
+      .then((res) => {
+        setNftOwners(res.data[0]["COUNT(DISTINCT(SIGNERS))"]);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(
         "https://node-api.flipsidecrypto.com/api/v2/queries/8d970e8f-f638-4e2d-a7b1-3e38e16f76b3/data/latest"
       )
       .then((res) => {
@@ -98,6 +110,10 @@ const SingleNFT = () => {
 
   return (
     <div className="single">
+      <h2>Current NFT Holders</h2>
+      <div className="single-topper">
+        <h3>{nftOwners} Governooors</h3>
+      </div>
       <div className="chart-area">
         <Bar options={nftChartOptions} data={nftChartData} />
       </div>

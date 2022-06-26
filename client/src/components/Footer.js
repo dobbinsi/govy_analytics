@@ -9,7 +9,7 @@ const Footer = () => {
       </h3>
       <div className="logo-footer">
         <h2>Powered by</h2>
-        <a href="https://flipsidecrypto.xyz/">
+        <a href="https://app.flipsidecrypto.com/dashboard/marinade-governance-YQ_IUg">
           {" "}
           <img
             src={flipsidelogo}

@@ -28,10 +28,10 @@ const Double = () => {
         data: distChartWallets,
         backgroundColor: [
           "#27a17a",
-          "#c8ece0",
+          "#308d89",
           "#d1c8b6",
           "#e76d48",
-          "#308d89",
+          "#c8ece0",
         ],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,
@@ -97,7 +97,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Aggregate Voter Participation (Current Governooors)",
+        text: "Aggregate Voter Participation (Current NFT Holders)",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",

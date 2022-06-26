@@ -157,3 +157,11 @@ td {
 .validator-shares {
     text-align: center;
 }
+
+th.first-column {
+  text-align: start;
+}
+
+.conc {
+  text-align: start;
+}

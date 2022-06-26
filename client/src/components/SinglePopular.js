@@ -21,7 +21,7 @@ const SinglePopular = () => {
       <table className="table-main">
         <thead>
           <tr>
-            <th>Validator Name</th>
+            <th className="first-column">Validator Name</th>
             <th>Unique Voters</th>
             <th>Total Votes (MNDE)</th>
           </tr>

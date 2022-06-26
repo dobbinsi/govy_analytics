@@ -14,6 +14,7 @@ import { Line } from "react-chartjs-2";
 
 const SingleTopAddys = () => {
   const [topAddys, setTopAddys] = useState([]);
+  const [concentration, setConcentration] = useState([]);
 
   const topCategories = topAddys.map((item) => {
     return item["'TOP 5 VOTING POWER'"];
@@ -93,12 +94,24 @@ const SingleTopAddys = () => {
       )
       .then((res) => {
         setTopAddys(res.data);
+        setConcentration(res.data[0]["VOTING_POWER"]);
       })
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <div className="single">
+      <h2 className="conc">Concentration Level</h2>
+      {concentration <= 24.999 ? (
+        <h3 className="conc">Low</h3>
+      ) : (
+        <null className="conc"></null>
+      )}
+      {concentration >= 50 ? (
+        <h3 className="conc">Very High</h3>
+      ) : (
+        <h3 className="conc">High</h3>
+      )}
       <div className="chart-area">
         <Line options={addyChartOptions} data={addyChartData} />
       </div>

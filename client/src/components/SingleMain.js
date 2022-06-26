@@ -13,7 +13,6 @@ import {
 import { Line } from "react-chartjs-2";
 
 const SingleMain = () => {
-  const [nftOwners, setNftOwners] = useState([]);
   const [mndeLocked, setMndeLocked] = useState([]);
   const [circSupply, setCircSupply] = useState([]);
   const percentCirculating = (mndeLocked / circSupply) * 100;
@@ -94,17 +93,6 @@ const SingleMain = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/b3ee2990-4fcf-4c9d-850a-c1038c7ea29c/data/latest"
-      )
-      .then((res) => {
-        setNftOwners(res.data[0]["COUNT(DISTINCT(SIGNERS))"]);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get(
         "https://node-api.flipsidecrypto.com/api/v2/queries/83e46e3d-6341-4b18-97e5-cc33cd3ff735/data/latest"
       )
       .then((res) => {
@@ -127,15 +115,11 @@ const SingleMain = () => {
 
   return (
     <div className="single">
-      <div className="single-topper">
-        <h2>MNDE Locked</h2>
-        <h2>Current NFT Owners</h2>
-      </div>
+      <h2>MNDE Locked</h2>
       <div className="single-topper">
         <h3>
           {mndeLocked.toLocaleString()} ({percentCirculating.toFixed(2)}%)
         </h3>
-        <h3>{nftOwners}</h3>
       </div>
       <div className="chart-area">
         <Line options={mndeChartOptions} data={mndeChartData} />

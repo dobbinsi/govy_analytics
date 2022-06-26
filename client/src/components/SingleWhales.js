@@ -21,7 +21,7 @@ const SingleWhales = () => {
       <table className="table-main">
         <thead>
           <tr>
-            <th>Wallet Address</th>
+            <th className="first-column">Wallet Address</th>
             <th>MNDE Locked</th>
             <th>Validator Name</th>
             {/* <th>Total Votes (MNDE)</th> */}
