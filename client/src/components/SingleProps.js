@@ -46,7 +46,6 @@ const SingleProps = () => {
     }
     return comparison;
   }
-  votingData.sort(compare);
 
   ChartJS.register(
     CategoryScale,
@@ -128,6 +127,8 @@ const SingleProps = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  votingData.sort(compare);
 
   return (
     <div className="single">

@@ -32,7 +32,6 @@ const Double = () => {
     }
     return comparison;
   }
-  voterDistribution.sort(compare);
 
   const distChartData = {
     labels: distChartLevels,
@@ -133,6 +132,8 @@ const Double = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  voterDistribution.sort(compare);
 
   useEffect(() => {
     axios
