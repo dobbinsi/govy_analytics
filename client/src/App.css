@@ -113,16 +113,6 @@ a:visited {
   margin-bottom: 20px;
 }
 
-/* .table-main-whales {
-  border-collapse: collapse;
-  min-width: 90%;
-  margin: auto;
-  box-shadow: 0 0 20px #00000026;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-bottom: 20px;
-} */
-
 .table-main thead tr {
   background-color: #308d89;
   color: #ffffff;
@@ -143,7 +133,6 @@ td {
 
 .table-main tbody tr:hover {
   background-color: #c8ece0;
-  font-weight: bold;
 }
 
 .table-main tbody tr:last-of-type {
@@ -151,11 +140,11 @@ td {
 }
 
 .validator-voters {
-    text-align: center;
+  text-align: center;
 }
 
 .validator-shares {
-    text-align: center;
+  text-align: center;
 }
 
 th.first-column {

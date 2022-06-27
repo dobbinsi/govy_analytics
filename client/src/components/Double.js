@@ -20,6 +20,20 @@ const Double = () => {
     return item["VOTING_STATUS"];
   });
 
+  function compare(a, b) {
+    const nameA = a.LEVELS;
+    const nameB = b.LEVELS;
+
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+  voterDistribution.sort(compare);
+
   const distChartData = {
     labels: distChartLevels,
     datasets: [
@@ -27,11 +41,11 @@ const Double = () => {
         label: "# of Voters",
         data: distChartWallets,
         backgroundColor: [
-          "#27a17a",
-          "#c8ece0",
-          "#d1c8b6",
-          "#e76d48",
           "#308d89",
+          "#27a17a",
+          "#d1c8b6",
+          "#c8ece0",
+          "#e76d48",
         ],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,
@@ -54,7 +68,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Voter Power Distribution",
+        text: "Voting Power Distribution",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",

@@ -32,7 +32,9 @@ const SingleWhales = () => {
             <tr>
               <td>{whale.WHALES}</td>
               <td className="validator-voters">
-                {whale.NET_MNDE_LOCKED.toLocaleString()}
+                {whale.NET_MNDE_LOCKED.toLocaleString(undefined, {
+                  maximumFractionDigits: 0,
+                })}
               </td>
               <td className="validator-shares">{whale.VALIDATOR_NAMES}</td>
               {/* <td className="validator-shares">

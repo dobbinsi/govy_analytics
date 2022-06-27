@@ -32,7 +32,9 @@ const SinglePopular = () => {
               <td>{validator.VALIDATOR_NAMES}</td>
               <td className="validator-voters">{validator.VOTERS}</td>
               <td className="validator-shares">
-                {validator.TOTAL_DELEGATED_SHARES.toLocaleString()}
+                {validator.TOTAL_DELEGATED_SHARES.toLocaleString(undefined, {
+                  maximumFractionDigits: 0,
+                })}
               </td>
             </tr>
           ))}
