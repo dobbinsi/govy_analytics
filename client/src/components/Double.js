@@ -125,6 +125,17 @@ const Double = () => {
   useEffect(() => {
     axios
       .get(
+        "https://node-api.flipsidecrypto.com/api/v2/queries/e240c1c7-71a0-4478-8f97-55ace91dbbce/data/latest"
+      )
+      .then((res) => {
+        setParticipation(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(
         "https://node-api.flipsidecrypto.com/api/v2/queries/90a54a96-8403-42b4-8afd-cdec8eaba77b/data/latest"
       )
       .then((res) => {
@@ -134,17 +145,6 @@ const Double = () => {
   }, []);
 
   voterDistribution.sort(compare);
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/e240c1c7-71a0-4478-8f97-55ace91dbbce/data/latest"
-      )
-      .then((res) => {
-        setParticipation(res.data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   return (
     <div className="double">
