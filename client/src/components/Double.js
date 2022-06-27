@@ -28,10 +28,10 @@ const Double = () => {
         data: distChartWallets,
         backgroundColor: [
           "#27a17a",
-          "#308d89",
+          "#c8ece0",
           "#d1c8b6",
           "#e76d48",
-          "#c8ece0",
+          "#308d89",
         ],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,

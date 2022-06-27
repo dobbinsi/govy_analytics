@@ -14,6 +14,16 @@ import { Bar } from "react-chartjs-2";
 
 const SingleProps = () => {
   const [votingData, setVotingData] = useState([]);
+  const numProps = votingData.length;
+  const getSum = (arr, key) => {
+    return arr.reduce(
+      (accumulator, current) => accumulator + Number(current[key]),
+      0
+    );
+  };
+  const sumVoters = getSum(votingData, "COUNT_VOTERS");
+  const averageTurnout = (sumVoters / numProps).toLocaleString();
+
   const propNumbers = votingData.map((item) => {
     return item["PROPOSAL_NAMES"];
   });
@@ -121,6 +131,9 @@ const SingleProps = () => {
 
   return (
     <div className="single">
+      <h2>Average Turnout</h2>
+      <h3>{averageTurnout} Governooors</h3>
+
       <div className="chart-area">
         <Bar options={propChartOptions} data={propChartData} />
       </div>
