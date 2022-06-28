@@ -47,6 +47,11 @@ const SinglePopular = () => {
           </table>
         </div>
       </div>
+      <p className="footnote">
+        * Total Votes (MNDE) column represents the raw sum of votes a given
+        validator gauge has received since inception. Does not represent
+        current, net voting power allocated to the gauge{" "}
+      </p>
     </div>
   );
 };

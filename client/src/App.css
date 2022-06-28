@@ -190,3 +190,7 @@ th.first-column {
     display: none;
   }
 }
+
+.footnote {
+  font-size: smaller;
+} 

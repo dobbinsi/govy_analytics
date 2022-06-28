@@ -24,6 +24,8 @@ const SingleProps = () => {
   const sumVoters = getSum(votingData, "COUNT_VOTERS");
   const averageTurnout = (sumVoters / numProps).toLocaleString();
 
+  votingData.sort(compare);
+
   const propNumbers = votingData.map((item) => {
     return item["PROPOSAL_NAMES"];
   });
@@ -127,8 +129,6 @@ const SingleProps = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
-  votingData.sort(compare);
 
   return (
     <div className="single">

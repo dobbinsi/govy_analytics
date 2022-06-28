@@ -26,7 +26,7 @@ const SingleWhales = () => {
                 <th className="first-column">Wallet Address</th>
                 <th>MNDE Locked</th>
                 <th>Validator Name</th>
-                {/* <th>Total Votes (MNDE)</th> */}
+                <th>Total Votes</th>
               </tr>
             </thead>
             <tbody>
@@ -39,14 +39,23 @@ const SingleWhales = () => {
                     })}
                   </td>
                   <td className="validator-shares">{whale.VALIDATOR_NAMES}</td>
-                  {/* <td className="validator-shares">
-                    {whale.TOTAL_DELEGATED_SHARES.toLocaleString()}
-                  </td> */}
+                  <td className="validator-shares">
+                    {whale.TOTAL_DELEGATED_SHARES.toLocaleString(undefined, {
+                      maximumFractionDigits: 0,
+                    })}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="footnote">
+        <p>
+          * Total Votes column represents the raw sum of votes a given wallet has assigned to the
+          validator gauge since inception. Does not represent
+          current, net voting power allocated to the gauge. Does not include votes from other wallets{" "}
+        </p>
       </div>
     </div>
   );
