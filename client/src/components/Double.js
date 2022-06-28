@@ -7,6 +7,8 @@ const Double = () => {
   const [voterDistribution, setVoterDistribution] = useState([]);
   const [participation, setParticipation] = useState([]);
 
+  voterDistribution.sort(compare);
+
   const distChartLevels = voterDistribution.map((item) => {
     return item["LEVELS"];
   });
@@ -143,8 +145,6 @@ const Double = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
-  voterDistribution.sort(compare);
 
   return (
     <div className="double">
