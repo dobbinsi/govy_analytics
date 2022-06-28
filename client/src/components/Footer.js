@@ -8,7 +8,7 @@ const Footer = () => {
         <a href="https://twitter.com/dawbyinz">d0bby</a>
       </h3>
       <div className="logo-footer">
-        <h2>Powered by</h2>
+        <h2 className="footer-bigtxt">Powered by</h2>
         <a href="https://app.flipsidecrypto.com/dashboard/marinade-governance-YQ_IUg">
           {" "}
           <img

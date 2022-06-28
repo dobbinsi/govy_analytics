@@ -18,28 +18,35 @@ const SinglePopular = () => {
   return (
     <div className="single">
       <h3 className="table-title">Most Popular Validators</h3>
-      <table className="table-main">
-        <thead>
-          <tr>
-            <th className="first-column">Validator Name</th>
-            <th>Unique Voters</th>
-            <th>Total Votes (MNDE)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {popTableData.map((validator, index) => (
-            <tr>
-              <td>{validator.VALIDATOR_NAMES}</td>
-              <td className="validator-voters">{validator.VOTERS}</td>
-              <td className="validator-shares">
-                {validator.TOTAL_DELEGATED_SHARES.toLocaleString(undefined, {
-                  maximumFractionDigits: 0,
-                })}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="table-wrapper">
+        <div className="table-scroll">
+          <table className="table-main">
+            <thead>
+              <tr>
+                <th className="first-column">Validator Name</th>
+                <th>Unique Voters</th>
+                <th>Total Votes (MNDE)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {popTableData.map((validator, index) => (
+                <tr>
+                  <td>{validator.VALIDATOR_NAMES}</td>
+                  <td className="validator-voters">{validator.VOTERS}</td>
+                  <td className="validator-shares">
+                    {validator.TOTAL_DELEGATED_SHARES.toLocaleString(
+                      undefined,
+                      {
+                        maximumFractionDigits: 0,
+                      }
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

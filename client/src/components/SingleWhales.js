@@ -18,32 +18,36 @@ const SingleWhales = () => {
   return (
     <div className="single">
       <h3 className="table-title">Whale Watching</h3>
-      <table className="table-main">
-        <thead>
-          <tr>
-            <th className="first-column">Wallet Address</th>
-            <th>MNDE Locked</th>
-            <th>Validator Name</th>
-            {/* <th>Total Votes (MNDE)</th> */}
-          </tr>
-        </thead>
-        <tbody>
-          {whaleTableData.map((whale, index) => (
-            <tr>
-              <td>{whale.WHALES}</td>
-              <td className="validator-voters">
-                {whale.NET_MNDE_LOCKED.toLocaleString(undefined, {
-                  maximumFractionDigits: 0,
-                })}
-              </td>
-              <td className="validator-shares">{whale.VALIDATOR_NAMES}</td>
-              {/* <td className="validator-shares">
-                {whale.TOTAL_DELEGATED_SHARES.toLocaleString()}
-              </td> */}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="table-wrapper">
+        <div className="table-scroll">
+          <table className="table-main">
+            <thead>
+              <tr>
+                <th className="first-column">Wallet Address</th>
+                <th>MNDE Locked</th>
+                <th>Validator Name</th>
+                {/* <th>Total Votes (MNDE)</th> */}
+              </tr>
+            </thead>
+            <tbody>
+              {whaleTableData.map((whale, index) => (
+                <tr>
+                  <td>{whale.WHALES}</td>
+                  <td className="validator-voters">
+                    {whale.NET_MNDE_LOCKED.toLocaleString(undefined, {
+                      maximumFractionDigits: 0,
+                    })}
+                  </td>
+                  <td className="validator-shares">{whale.VALIDATOR_NAMES}</td>
+                  {/* <td className="validator-shares">
+                    {whale.TOTAL_DELEGATED_SHARES.toLocaleString()}
+                  </td> */}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Header = () => {
         </a>
       </div>
       <div className="txt-main">
-        <h1>Governance Analytics</h1>
+        <h1 className="header-bigtxt">Governance Analytics</h1>
       </div>
     </div>
   );

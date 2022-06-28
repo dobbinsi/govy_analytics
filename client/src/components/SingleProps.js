@@ -134,7 +134,6 @@ const SingleProps = () => {
     <div className="single">
       <h2>Average Turnout</h2>
       <h3>{averageTurnout} Governooors</h3>
-
       <div className="chart-area">
         <Bar options={propChartOptions} data={propChartData} />
       </div>
