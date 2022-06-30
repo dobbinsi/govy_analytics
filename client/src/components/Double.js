@@ -85,7 +85,7 @@ const Double = () => {
       {
         label: "# of Wallets",
         data: partChartWallets,
-        backgroundColor: ["#308d89", "#e76d48"],
+        backgroundColor: ["#e76d48", "#308d89"],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,
       },
