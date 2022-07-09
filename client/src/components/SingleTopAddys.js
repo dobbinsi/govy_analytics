@@ -90,7 +90,7 @@ const SingleTopAddys = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/d9d28055-11b9-4e87-82bb-ef0e94baaef3/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/7af17b58-ebed-4930-ae80-dc90802928ca/data/latest"
       )
       .then((res) => {
         setTopAddys(res.data);
@@ -102,7 +102,7 @@ const SingleTopAddys = () => {
   return (
     <div className="single">
       <h2 className="conc">Concentration Level</h2>
-      {concentration <= 24.999 ? (
+      {concentration <= 19.999 ? (
         <h3 className="conc">Low</h3>
       ) : (
         <null className="conc"></null>

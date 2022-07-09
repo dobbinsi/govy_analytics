@@ -122,7 +122,7 @@ const SingleProps = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/ee4c1871-180e-452c-8a4b-d2bdd2469dc9/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/57c5afb3-800f-4f30-bdfc-d75afd2b2889/data/latest"
       )
       .then((res) => {
         setVotingData(res.data);

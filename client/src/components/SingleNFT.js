@@ -89,7 +89,7 @@ const SingleNFT = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/b3ee2990-4fcf-4c9d-850a-c1038c7ea29c/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/3a925b0f-a72c-43d9-8526-f5b3e30cad88/data/latest"
       )
       .then((res) => {
         setNftOwners(res.data[0]["COUNT(DISTINCT(SIGNERS))"]);

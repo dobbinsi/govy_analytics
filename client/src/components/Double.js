@@ -13,7 +13,7 @@ const Double = () => {
     return item["LEVELS"];
   });
   const distChartWallets = voterDistribution.map((item) => {
-    return item["NUMBER_OF_WALLETS"];
+    return item["NUMBER_OF_NFTS"];
   });
   const partChartWallets = participation.map((item) => {
     return item["HOLDERS_VOTERS"];
@@ -85,7 +85,7 @@ const Double = () => {
       {
         label: "# of Wallets",
         data: partChartWallets,
-        backgroundColor: ["#e76d48", "#308d89"],
+        backgroundColor: ["#308d89", "#e76d48"],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,
       },
@@ -127,7 +127,7 @@ const Double = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/e240c1c7-71a0-4478-8f97-55ace91dbbce/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/fefc8c90-bfa6-489e-a183-5d41ca497931/data/latest"
       )
       .then((res) => {
         setParticipation(res.data);
@@ -138,7 +138,7 @@ const Double = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/90a54a96-8403-42b4-8afd-cdec8eaba77b/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/8253d6f3-a9ac-4fda-a811-9ce98087a323/data/latest"
       )
       .then((res) => {
         setVoterDistribution(res.data);

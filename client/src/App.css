@@ -160,7 +160,9 @@ th.first-column {
 }
 
 .table-scroll {
+  max-height: 700px;
   overflow: auto;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -169,7 +171,7 @@ th.first-column {
   }
   .double {
     margin: auto;
-    display:block;
+    display: block;
     background-color: transparent;
     margin-bottom: 20px;
   }
@@ -193,4 +195,4 @@ th.first-column {
 
 .footnote {
   font-size: smaller;
-} 
+}

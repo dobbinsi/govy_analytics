@@ -7,7 +7,7 @@ const SingleWhales = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/4d9a0459-6c86-4f67-8738-346ed0eb54c9/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/8e8c477a-190e-42b6-98c6-3ca61c2fbf61/data/latest"
       )
       .then((res) => {
         setWhaleTableData(res.data);
