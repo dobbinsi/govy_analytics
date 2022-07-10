@@ -194,5 +194,10 @@ th.first-column {
 }
 
 .footnote {
-  font-size: smaller;
+  font-size:x-small;
+}
+
+.footnote-whale {
+  font-size:x-small;
+  margin-top: 20px;
 }

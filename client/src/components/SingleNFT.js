@@ -110,7 +110,7 @@ const SingleNFT = () => {
 
   return (
     <div className="single">
-      <h2>Current NFT Holders</h2>
+      <h2>Unique NFT Holders</h2>
       <div className="single-topper">
         <h3>{nftOwners} Governooors</h3>
       </div>

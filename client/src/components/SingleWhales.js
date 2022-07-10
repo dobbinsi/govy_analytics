@@ -50,7 +50,7 @@ const SingleWhales = () => {
           </table>
         </div>
       </div>
-      <div className="footnote">
+      <div className="footnote-whale">
         <p>
           * Total Votes column represents the raw sum of votes a given wallet has assigned to the
           validator gauge since inception. Does not represent

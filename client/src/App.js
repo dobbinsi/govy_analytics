@@ -8,6 +8,7 @@ import SingleTopAddys from "./components/SingleTopAddys";
 import SingleProps from "./components/SingleProps";
 import SinglePopular from "./components/SinglePopular";
 import SinlgeWhales from "./components/SingleWhales";
+import DoubleDouble from "./components/DoubleDouble";
 
 const App = () => {
   return (
@@ -15,8 +16,9 @@ const App = () => {
       <Header />
       <SingleMain />
       <SingleNFT />
-      <Double />
+      <DoubleDouble />
       <SingleTopAddys />
+      <Double />
       <SingleProps />
       <SinglePopular />
       <SinlgeWhales />

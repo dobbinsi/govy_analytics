@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Chart as ChartJS, ArcElement, Title, Tooltip, Legend } from "chart.js";
-import { Pie, Doughnut } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Pie, PolarArea } from "react-chartjs-2";
 
 const Double = () => {
   const [voterDistribution, setVoterDistribution] = useState([]);
-  const [participation, setParticipation] = useState([]);
+  const [overlapData, setOverlapData] = useState([]);
 
   voterDistribution.sort(compare);
 
@@ -15,11 +22,11 @@ const Double = () => {
   const distChartWallets = voterDistribution.map((item) => {
     return item["NUMBER_OF_NFTS"];
   });
-  const partChartWallets = participation.map((item) => {
-    return item["HOLDERS_VOTERS"];
+  const overlapBuyers = overlapData.map((item) => {
+    return item["CHEF_BUYERS_COUNT"];
   });
-  const partChartStatus = participation.map((item) => {
-    return item["VOTING_STATUS"];
+  const overlapProjects = overlapData.map((item) => {
+    return item["PROJECT_NAMES"];
   });
 
   function compare(a, b) {
@@ -69,7 +76,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Voting Power Distribution (Unique Wallets)",
+        text: "Voting Power Distribution (NFTs Minted)",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",
@@ -79,26 +86,27 @@ const Double = () => {
     },
   };
 
-  const partChartData = {
-    labels: partChartStatus,
+  const overlapChartData = {
+    labels: overlapProjects,
     datasets: [
       {
         label: "# of Wallets",
-        data: partChartWallets,
-        backgroundColor: ["#308d89", "#e76d48"],
+        data: overlapBuyers,
+        backgroundColor: [
+          "#308d89",
+          "#27a17a",
+          "#d1c8b6",
+          "#c8ece0",
+          "#e76d48",
+        ],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,
       },
     ],
   };
 
-  const partChartOptions = {
+  const overlapChartOptions = {
     responsive: true,
-    layout: {
-      padding: {
-        bottom: 20,
-      },
-    },
     plugins: {
       legend: {
         position: "bottom",
@@ -112,7 +120,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Aggregate Voter Participation (Current NFT Holders)",
+        text: "NFT Community Overlap (Unique Wallets)",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",
@@ -122,15 +130,15 @@ const Double = () => {
     },
   };
 
-  ChartJS.register(ArcElement, Title, Tooltip, Legend);
+  ChartJS.register(RadialLinearScale, ArcElement, Title, Tooltip, Legend);
 
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/fefc8c90-bfa6-489e-a183-5d41ca497931/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/a91055d1-4a30-4286-9766-7e26fd2c36db/data/latest"
       )
       .then((res) => {
-        setParticipation(res.data);
+        setOverlapData(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -138,7 +146,7 @@ const Double = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/8253d6f3-a9ac-4fda-a811-9ce98087a323/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/bb7d0a02-a974-4ee7-a03a-bad2ac6eb3c6/data/latest"
       )
       .then((res) => {
         setVoterDistribution(res.data);
@@ -152,11 +160,10 @@ const Double = () => {
         <Pie options={distChartOptions} data={distChartData} />
       </div>
       <div className="small-chart-area">
-        <Doughnut options={partChartOptions} data={partChartData} />
+        <PolarArea options={overlapChartOptions} data={overlapChartData} />
         <div className="footnote">
           <p>
-            * Includes wallets that have voted on at least one proposal or
-            validator gauge{" "}
+            * Reflects purchasing behavior of Chef NFT wallets from Dec. 1 2021 - present{" "}
           </p>
         </div>
       </div>
