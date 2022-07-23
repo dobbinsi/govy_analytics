@@ -59,6 +59,16 @@ const SingleProps = () => {
     Legend
   );
 
+  const propDetails = [
+    "gm governance!",
+    "Redirect Marinade protocol fees to the SOL staked pool",
+    "Vote on validators stake using on-chain gauges",
+    "Move Liquidity Mining from Chefs to Gauges",
+    "Marinade Token exchange program",
+  ];
+
+  const propResults = ["Pass", "Pass", "Pass", "Pass", "Pass",];
+
   const propChartOptions = {
     responsive: true,
     scales: {
@@ -86,6 +96,16 @@ const SingleProps = () => {
     plugins: {
       legend: {
         position: "",
+      },
+      tooltip: {
+        callbacks: {
+          afterTitle: function (context) {
+            return `${propDetails[context[0].dataIndex]}`;
+          },
+          afterBody: function (context) {
+            return `Result: ${propResults[context[0].dataIndex]}`;
+          },
+        },
       },
       title: {
         display: true,

@@ -8,6 +8,7 @@ const Double = () => {
   const [participation, setParticipation] = useState([]);
 
   voterDistribution.sort(compare);
+  participation.sort(compareTwo);
 
   const distChartLevels = voterDistribution.map((item) => {
     return item["LEVELS"];
@@ -25,6 +26,19 @@ const Double = () => {
   function compare(a, b) {
     const nameA = a.LEVELS;
     const nameB = b.LEVELS;
+
+    let comparison = 0;
+    if (nameA > nameB) {
+      comparison = 1;
+    } else if (nameA < nameB) {
+      comparison = -1;
+    }
+    return comparison;
+  }
+
+  function compareTwo(a, b) {
+    const nameA = a.VOTING_STATUS;
+    const nameB = b.VOTING_STATUS;
 
     let comparison = 0;
     if (nameA > nameB) {
