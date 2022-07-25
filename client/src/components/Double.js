@@ -126,7 +126,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Aggregate Voter Participation (Current NFT Holders)",
+        text: "Voter Participation (Current NFT Holders)",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",
