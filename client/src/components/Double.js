@@ -17,10 +17,10 @@ const Double = () => {
     return item["NUMBER_OF_NFTS"];
   });
   const partChartWallets = participation.map((item) => {
-    return item["HOLDERS_VOTERS"];
+    return item["WALLET_COUNT"];
   });
   const partChartStatus = participation.map((item) => {
-    return item["VOTING_STATUS"];
+    return item["WALLET_CATEGORY"];
   });
 
   function compare(a, b) {
@@ -37,8 +37,8 @@ const Double = () => {
   }
 
   function compareTwo(a, b) {
-    const nameA = a.VOTING_STATUS;
-    const nameB = b.VOTING_STATUS;
+    const nameA = a.WALLET_CATEGORY;
+    const nameB = b.WALLET_CATEGORY;
 
     let comparison = 0;
     if (nameA > nameB) {
@@ -99,7 +99,7 @@ const Double = () => {
       {
         label: "# of Wallets",
         data: partChartWallets,
-        backgroundColor: ["#308d89", "#e76d48"],
+        backgroundColor: ["#308d89", "#27a17a", "#c8ece0", "#e76d48"],
         borderColor: ["#4b423f"],
         borderWidth: 1.5,
       },
@@ -119,7 +119,7 @@ const Double = () => {
         align: "start",
         labels: {
           font: {
-            size: 14,
+            size: 11,
             family: "'Maven Pro', sans-serif",
           },
         },
@@ -141,7 +141,7 @@ const Double = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/fefc8c90-bfa6-489e-a183-5d41ca497931/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/b27f6c71-4747-4a33-9923-eac54af3bf66/data/latest"
       )
       .then((res) => {
         setParticipation(res.data);
@@ -169,8 +169,8 @@ const Double = () => {
         <Doughnut options={partChartOptions} data={partChartData} />
         <div className="footnote">
           <p>
-            * Includes wallets that have voted on at least one proposal or
-            validator gauge{" "}
+            * Includes voting activity on validator gauges & MNDE liquidity
+            mining gauges{" "}
           </p>
         </div>
       </div>

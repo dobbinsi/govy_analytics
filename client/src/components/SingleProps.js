@@ -65,9 +65,10 @@ const SingleProps = () => {
     "Vote on validators stake using on-chain gauges",
     "Move Liquidity Mining from Chefs to Gauges",
     "Marinade Token exchange program",
+    "Market Making Partnership with Lifinity"
   ];
 
-  const propResults = ["Pass", "Pass", "Pass", "Pass", "Pass",];
+  const propResults = ["Pass", "Pass", "Pass", "Pass", "Pass", "Pass"];
 
   const propChartOptions = {
     responsive: true,
@@ -142,7 +143,7 @@ const SingleProps = () => {
   useEffect(() => {
     axios
       .get(
-        "https://node-api.flipsidecrypto.com/api/v2/queries/57c5afb3-800f-4f30-bdfc-d75afd2b2889/data/latest"
+        "https://node-api.flipsidecrypto.com/api/v2/queries/747727d1-5faf-4ec6-a7af-49e0e133bb79/data/latest"
       )
       .then((res) => {
         setVotingData(res.data);

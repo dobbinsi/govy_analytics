@@ -110,7 +110,7 @@ const SingleTopAddys = () => {
       {concentration >= 50 ? (
         <h3 className="conc">Very High</h3>
       ) : (
-        <null className="conc"></null>
+        <p className="conc"></p>
       )}
       <div className="chart-area">
         <Line options={addyChartOptions} data={addyChartData} />
