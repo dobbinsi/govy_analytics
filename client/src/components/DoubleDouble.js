@@ -76,7 +76,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Total Chef NFT Supply by Level",
+        text: "Total Chef NFT Supply by Level (MNDE Locked)",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",
