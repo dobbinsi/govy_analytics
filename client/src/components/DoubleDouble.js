@@ -76,7 +76,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Voting Power Distribution (NFTs Minted)",
+        text: "Total Chef NFT Supply by Level",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",
