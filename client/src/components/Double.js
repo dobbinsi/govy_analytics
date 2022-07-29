@@ -83,7 +83,7 @@ const Double = () => {
       },
       title: {
         display: true,
-        text: "Voting Power Distribution (Unique Wallets)",
+        text: "Cumulative NFT Level (Unique Wallets)",
         font: {
           size: 18,
           family: "'Maven Pro', sans-serif",
