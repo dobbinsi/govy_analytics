@@ -26,6 +26,7 @@ const SinglePopular = () => {
                 <th className="first-column">Validator Name</th>
                 <th>Unique Voters</th>
                 <th>Total Votes (MNDE)</th>
+                <th>Avg. MNDE per Voter</th>
               </tr>
             </thead>
             <tbody>
@@ -40,6 +41,13 @@ const SinglePopular = () => {
                         maximumFractionDigits: 0,
                       }
                     )}
+                  </td>
+                  <td className="validator-shares">
+                    {(
+                      validator.TOTAL_DELEGATED_SHARES / validator.VOTERS
+                    ).toLocaleString(undefined, {
+                      maximumFractionDigits: 0,
+                    })}
                   </td>
                 </tr>
               ))}
