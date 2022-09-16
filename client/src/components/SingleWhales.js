@@ -32,7 +32,14 @@ const SingleWhales = () => {
             <tbody>
               {whaleTableData.map((whale, index) => (
                 <tr>
-                  <td>{whale.WHALES}</td>
+                  <td>
+                    <a
+                      href={"https://solana.fm/address/".concat(whale.WHALES)}
+                      className="table-links"
+                    >
+                      {whale.WHALES}
+                    </a>
+                  </td>
                   <td className="validator-voters">
                     {whale.NET_MNDE_LOCKED.toLocaleString(undefined, {
                       maximumFractionDigits: 0,
@@ -52,9 +59,10 @@ const SingleWhales = () => {
       </div>
       <div className="footnote-whale">
         <p>
-          * Total Votes column represents the raw sum of votes a given wallet has assigned to the
-          validator gauge since inception. Does not represent
-          current, net voting power allocated to the gauge. Does not include votes from other wallets{" "}
+          * Total Votes column represents the raw sum of votes a given wallet
+          has assigned to the validator gauge since inception. Does not
+          represent current, net voting power allocated to the gauge. Does not
+          include votes from other wallets{" "}
         </p>
       </div>
     </div>

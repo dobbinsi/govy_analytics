@@ -66,10 +66,12 @@ const SingleProps = () => {
     "Move Liquidity Mining from Chefs to Gauges",
     "Marinade Token exchange program",
     "Market Making Partnership with Lifinity",
-    "Delegation strategy and fee structure changes"
+    "Delegation strategy and fee structure changes",
+    "Marketing budget",
+    "Grant committee",
   ];
 
-  const propResults = ["Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass"];
+  const propResults = ["Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass"];
 
   const propChartOptions = {
     responsive: true,

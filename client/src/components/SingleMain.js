@@ -104,11 +104,9 @@ const SingleMain = () => {
 
   useEffect(() => {
     axios
-      .get(
-        "https://marinade-dashboard-api-temp.herokuapp.com/mnde?circulating_supply"
-      )
+      .get("https://api.coingecko.com/api/v3/coins/marinade")
       .then((res) => {
-        setCircSupply(res.data.mnde_circulating_supply);
+        setCircSupply(res.data.market_data.circulating_supply);
       })
       .catch((err) => console.log(err));
   }, []);
