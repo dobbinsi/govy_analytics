@@ -69,9 +69,25 @@ const SingleProps = () => {
     "Delegation strategy and fee structure changes",
     "Marketing budget",
     "Grant committee",
+    "Formal censure of Batman1241#6915",
+    "Disabling of current permissioned/closed gauge and prevent future ones",
+    "Preventing the Creation of Permissioned/Closed Gauges",
   ];
 
-  const propResults = ["Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass", "Pass"];
+  const propResults = [
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Fail",
+    "Fail",
+    "Pass",
+  ];
 
   const propChartOptions = {
     responsive: true,

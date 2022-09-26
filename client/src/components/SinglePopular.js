@@ -32,7 +32,14 @@ const SinglePopular = () => {
             <tbody>
               {popTableData.map((validator, index) => (
                 <tr>
-                  <td>{validator.VALIDATOR_NAMES}</td>
+                  <td>
+                    <a
+                      href={"https://solanabeach.io/validators"}
+                      className="table-links"
+                    >
+                      {validator.VALIDATOR_NAMES}
+                    </a>
+                  </td>
                   <td className="validator-voters">{validator.VOTERS}</td>
                   <td className="validator-shares">
                     {validator.TOTAL_DELEGATED_SHARES.toLocaleString(
