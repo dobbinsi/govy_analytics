@@ -194,10 +194,20 @@ th.first-column {
 }
 
 .footnote {
-  font-size:x-small;
+  font-size: x-small;
 }
 
 .footnote-whale {
-  font-size:x-small;
+  font-size: x-small;
   margin-top: 20px;
+}
+
+.fallback {
+  text-align: center;
+}
+
+.fallback img {
+  height: 90px;
+  width: 90px;
+  margin-bottom: 20px;
 }

@@ -72,6 +72,12 @@ const SingleProps = () => {
     "Formal censure of Batman1241#6915",
     "Disabling of current permissioned/closed gauge and prevent future ones",
     "Preventing the Creation of Permissioned/Closed Gauges",
+    "Grant for further development of gamified ranking for chefs",
+    "Increase governable stake in validator gauges to 20%",
+    "Validator's stake accounts used as collateral through Marinade",
+    "Remove Lifinity liquidity gauge",
+    "Elect @dobby to the grant committee",
+    "Use of Treasury to hire Soju a Male Escort",
   ];
 
   const propResults = [
@@ -87,6 +93,12 @@ const SingleProps = () => {
     "Fail",
     "Fail",
     "Pass",
+    "Fail",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Pass",
+    "Fail",
   ];
 
   const propChartOptions = {
