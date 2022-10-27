@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Pagination from "./Pagination";
 
 const SingleWhales = () => {
   const [whaleTableData, setWhaleTableData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const sliceWhale = whaleTableData.slice(
+    (currentPage - 1) * 10,
+    currentPage * 10
+  );
 
   useEffect(() => {
     axios
@@ -30,7 +36,7 @@ const SingleWhales = () => {
               </tr>
             </thead>
             <tbody>
-              {whaleTableData.map((whale, index) => (
+              {sliceWhale.map((whale, index) => (
                 <tr>
                   <td>
                     <a
@@ -55,6 +61,12 @@ const SingleWhales = () => {
               ))}
             </tbody>
           </table>
+          <Pagination
+            currentPage={currentPage}
+            total={180}
+            limit={20}
+            onPageChange={(page) => setCurrentPage(page)}
+          />
         </div>
       </div>
       <div className="footnote-whale">
