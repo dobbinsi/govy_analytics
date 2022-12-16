@@ -78,6 +78,8 @@ const SingleProps = () => {
     "Remove Lifinity liquidity gauge",
     "Elect @dobby to the grant committee",
     "Use of Treasury to hire Soju a Male Escort",
+    "Liquid Unstake Pool parameters change",
+    "Launch Open Doors program",
   ];
 
   const propResults = [
@@ -99,6 +101,8 @@ const SingleProps = () => {
     "Pass",
     "Pass",
     "Fail",
+    "Pass",
+    "Pass",
   ];
 
   const propChartOptions = {
